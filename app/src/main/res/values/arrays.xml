@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dept_name">
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>TE</item>
+        <item>CE</item>
+    </string-array>
+</resources>
