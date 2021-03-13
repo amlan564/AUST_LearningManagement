@@ -11,6 +11,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SplashScreen extends AppCompatActivity {
 
     private static int SPLASH_SCREEN = 2600;
@@ -18,6 +20,8 @@ public class SplashScreen extends AppCompatActivity {
     Animation topAnim, bottomAnim;
     ImageView image;
     TextView logo, slogan;
+    private FirebaseAuth auth;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +36,7 @@ public class SplashScreen extends AppCompatActivity {
         image = findViewById(R.id.imageView);
         logo = findViewById(R.id.textView1);
         slogan = findViewById(R.id.textView2);
-
+        auth = FirebaseAuth.getInstance();
         image.setAnimation(topAnim);
         logo.setAnimation(bottomAnim);
         slogan.setAnimation(bottomAnim);
@@ -40,9 +44,15 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
-                startActivity(intent);
+                if(auth.getCurrentUser()!=null){
+                    intent = new Intent(SplashScreen.this, MainActivity.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(SplashScreen.this, Login.class);
+                    startActivity(intent);
+                }
                 finish();
+
             }
         }, SPLASH_SCREEN);
 
