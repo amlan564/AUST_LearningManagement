@@ -13,12 +13,6 @@
 
     </item>
 
-    <item android:id="@+id/navigation_theme"
-        android:title="Themes"
-        android:icon="@drawable/ic_theme">
-
-    </item>
-
     <item android:id="@+id/navigation_website"
         android:title="Website"
         android:icon="@drawable/ic_website">

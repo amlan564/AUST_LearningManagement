@@ -11,9 +11,9 @@
         android:roundIcon="@drawable/aust_lm"
         android:supportsRtl="true"
         android:theme="@style/Theme.AUSTLM">
-        <activity android:name=".Login"></activity>
+        <activity android:name=".video.VideoActivity"></activity>
+        <activity android:name=".Login" />
         <activity android:name=".SignUp" />
-        <activity android:name=".video.ShowVideo" />
         <activity android:name=".FullImageView" />
         <activity android:name=".pdf.PdfViewerActivity" />
         <activity

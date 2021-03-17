@@ -16,7 +16,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.austlm.pdf.PdfActivity;
-import com.example.austlm.video.ShowVideo;
+import com.example.austlm.video.VideoActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -69,15 +69,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
 
             case R.id.navigation_video:
-                startActivity(new Intent(this, ShowVideo.class));
+                startActivity(new Intent(this, VideoActivity.class));
                 break;
 
             case R.id.navigation_pdf:
                 startActivity(new Intent(this, PdfActivity.class));
-                break;
-
-            case R.id.navigation_theme:
-                Toast.makeText(this, "Themes", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.navigation_website:

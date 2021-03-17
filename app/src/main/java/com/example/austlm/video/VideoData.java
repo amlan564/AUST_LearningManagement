@@ -2,10 +2,14 @@ package com.example.austlm.video;
 
 public class VideoData {
 
-    String videoTitle, videoUri;
+    private String videoTitle, videoUri;
 
-    public VideoData(){
+    public VideoData() {
+    }
 
+    public VideoData(String videoTitle, String videoUri) {
+        this.videoTitle = videoTitle;
+        this.videoUri = videoUri;
     }
 
     public String getVideoTitle() {
